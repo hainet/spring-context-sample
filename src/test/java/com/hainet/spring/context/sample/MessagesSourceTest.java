@@ -67,7 +67,7 @@ public class MessagesSourceTest {
     @Test
     public void locale() {
         // messages.properties -> messages_XX.propertiesの順に呼び出される。
-        // messages.propertiesが存在しない場合エラーとなる。
+        // messages.propertiesが存在しない場合、org.springframework.context.NoSuchMessageExceptionが発生する。
         assertThat(
                 messageSource.getMessage("language", null, Locale.JAPANESE),
                 is("日本語")
