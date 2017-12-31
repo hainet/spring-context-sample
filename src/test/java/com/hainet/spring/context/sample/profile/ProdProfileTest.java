@@ -16,12 +16,12 @@ import static org.junit.Assert.assertThat;
 public class ProdProfileTest {
 
     @Autowired
-    private ProdComponent prodComponent;
+    private BaseEnvironment environment;
 
     @Test
-    public void prodComponent() {
+    public void prodEnvironment() {
         assertThat(
-                prodComponent.getEnv(),
+                environment.getEnv(),
                 is("prod")
         );
     }
